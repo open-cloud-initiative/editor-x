@@ -1,10 +1,10 @@
 import { siteConfig } from '@/config/site'
 import { PREFERENCE_DEFAULTS } from '@/lib/preferences-config'
 import { ThemeBootScript } from '@/scripts/theme-boot'
+import { PreferencesStoreProvider } from '@/stores/preferences/preferences-provider'
 import '@/styles/globals.css'
 import { SiteFooter } from 'components/site-footer'
 import { SiteHeader } from 'components/site-header'
-import { ThemeProvider } from 'components/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -29,17 +29,17 @@ export default function RootLayout({
     const { theme_mode, theme_preset } = PREFERENCE_DEFAULTS
 
     return (
-        <html lang="en" className={theme_mode} data-theme-preset={theme_preset}>
+        <html lang="en" className={theme_mode} data-theme-preset={theme_preset} suppressHydrationWarning>
             <head>
                 {/* Applies theme and layout preferences on load to avoid flicker and unnecessary server rerenders. */}
                 <ThemeBootScript />
             </head>
             <body className={`${inter.className} min-h-screen antialiased`}>
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                <PreferencesStoreProvider themeMode={theme_mode} themePreset={theme_preset}>
                     <SiteHeader />
                     {children}
                     <SiteFooter />
-                </ThemeProvider>
+                </PreferencesStoreProvider>
             </body>
         </html>
     )

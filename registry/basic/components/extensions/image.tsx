@@ -1,4 +1,4 @@
-"use client";
+'use client'
 // @ts-nocheck
 /* eslint-disable */
 import Image from "@tiptap/extension-image";
@@ -11,12 +11,12 @@ import {
   AlignCenter,
   AlignLeft,
   AlignRight,
-  Maximize,
-  MoreVertical,
-  Trash,
   Edit,
   ImageIcon,
   Loader2,
+  Maximize,
+  MoreVertical,
+  Trash,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -26,15 +26,15 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
 import { useImageUpload } from "@/hooks/use-image-upload";
+import { cn } from "@/lib/utils";
 
 export const ImageExtension = Image.extend({
   addAttributes() {

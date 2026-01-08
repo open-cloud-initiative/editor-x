@@ -1,4 +1,4 @@
-"use client";
+'use client'
 /* eslint-disable */
 // @ts-nocheck
 import { Button } from "@/components/ui/button";
@@ -14,14 +14,14 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useMediaQuery } from "@/hooks/use-media-querry";
 import { cn } from "@/lib/utils";
-import { useToolbar } from "./toolbar-provider";
 import type { Extension } from "@tiptap/core";
 import type { ColorOptions } from "@tiptap/extension-color";
 import type { HighlightOptions } from "@tiptap/extension-highlight";
 import { CheckIcon, ChevronDownIcon } from "lucide-react";
-import { useMediaQuery } from "@/hooks/use-media-querry";
 import { MobileToolbarGroup, MobileToolbarItem } from "./mobile-toolbar-group";
+import { useToolbar } from "./toolbar-provider";
 
 type TextStylingExtensions =
 	| Extension<ColorOptions, any>

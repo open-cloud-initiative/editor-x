@@ -1,16 +1,8 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
-
-import { type StoreApi, useStore } from 'zustand'
-
-import {
-    CONTENT_LAYOUT_VALUES,
-    NAVBAR_STYLE_VALUES,
-    SIDEBAR_COLLAPSIBLE_VALUES,
-    SIDEBAR_VARIANT_VALUES,
-} from '@/lib/layout'
 import { THEME_PRESET_VALUES } from '@/lib/theme'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { type StoreApi, useStore } from 'zustand'
 
 import { createPreferencesStore, type PreferencesState } from './preferences-store'
 
@@ -29,10 +21,6 @@ function readDomState(): Partial<PreferencesState> {
     return {
         themeMode: mode,
         themePreset: getSafeValue(root.getAttribute('data-theme-preset'), THEME_PRESET_VALUES),
-        contentLayout: getSafeValue(root.getAttribute('data-content-layout'), CONTENT_LAYOUT_VALUES),
-        navbarStyle: getSafeValue(root.getAttribute('data-navbar-style'), NAVBAR_STYLE_VALUES),
-        sidebarVariant: getSafeValue(root.getAttribute('data-sidebar-variant'), SIDEBAR_VARIANT_VALUES),
-        sidebarCollapsible: getSafeValue(root.getAttribute('data-sidebar-collapsible'), SIDEBAR_COLLAPSIBLE_VALUES),
     }
 }
 
@@ -40,18 +28,12 @@ export const PreferencesStoreProvider = ({
     children,
     themeMode,
     themePreset,
-    contentLayout,
-    navbarStyle,
 }: {
     children: React.ReactNode
     themeMode: PreferencesState['themeMode']
     themePreset: PreferencesState['themePreset']
-    contentLayout: PreferencesState['contentLayout']
-    navbarStyle: PreferencesState['navbarStyle']
 }) => {
-    const [store] = useState<StoreApi<PreferencesState>>(() =>
-        createPreferencesStore({ themeMode, themePreset, contentLayout, navbarStyle }),
-    )
+    const [store] = useState<StoreApi<PreferencesState>>(() => createPreferencesStore({ themeMode, themePreset }))
 
     useEffect(() => {
         const domState = readDomState()
