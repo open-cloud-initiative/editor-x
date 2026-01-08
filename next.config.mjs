@@ -1,19 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactCompiler: true,
-    serverExternalPackages: ["pg"],
-    compiler: {
-        removeConsole: process.env.NODE_ENV === "production",
-    },
-    async redirects() {
-        return [
-            {
-                source: "/dashboard",
-                destination: "/dashboard/default",
-                permanent: false,
-            },
-        ];
-    },
-};
+const nextConfig = {};
 
 export default nextConfig;
