@@ -6,11 +6,11 @@ import { MobileToolbarGroup, MobileToolbarItem } from './mobile-toolbar-group'
 
 import { Button } from 'components/ui/button'
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
 } from 'components/ui/dropdown-menu'
 import { Tooltip, TooltipContent, TooltipTrigger } from 'components/ui/tooltip'
 import { useToolbar } from './toolbar-provider'
@@ -22,7 +22,7 @@ export const AlignmentTooolbar = () => {
         editor?.chain().focus().setTextAlign(value).run()
     }
 
-    const isDisabled = editor?.isActive('image') ?? editor?.isActive('video') ?? !editor ?? false
+    const isDisabled = editor?.isActive('image') ?? editor?.isActive('video') ?? false
 
     const currentTextAlign = () => {
         if (editor?.isActive({ textAlign: 'left' })) {

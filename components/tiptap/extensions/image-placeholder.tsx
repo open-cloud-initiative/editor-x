@@ -1,13 +1,15 @@
-"use client";
+'use client'
 /* eslint-disable */
 // @ts-nocheck
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useImageUpload } from "@/hooks/use-image-upload";
 import {
 	NODE_HANDLES_SELECTED_STYLE_CLASSNAME,
 	isValidUrl,
 } from "@/lib/tiptap-utils";
+import { cn } from "@/lib/utils";
 import {
 	type CommandProps,
 	Node,
@@ -16,10 +18,8 @@ import {
 	ReactNodeViewRenderer,
 	mergeAttributes,
 } from "@tiptap/react";
-import { Image, Link, Upload, Loader2, X } from "lucide-react";
+import { Image, Link, Loader2, Upload, X } from "lucide-react";
 import { type FormEvent, useState } from "react";
-import { useImageUpload } from "@/hooks/use-image-upload";
-import { cn } from "@/lib/utils";
 
 export interface ImagePlaceholderOptions {
 	HTMLAttributes: Record<string, any>;

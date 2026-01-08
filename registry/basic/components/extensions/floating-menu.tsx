@@ -7,21 +7,21 @@ import { cn } from '@/lib/utils'
 import type { Editor } from '@tiptap/core'
 import { FloatingMenu } from '@tiptap/react/menus'
 import {
-  AlignCenter,
-  AlignLeft,
-  AlignRight,
-  ChevronRight,
-  Code2,
-  CodeSquare,
-  Heading1,
-  Heading2,
-  Heading3,
-  ImageIcon,
-  List,
-  ListOrdered,
-  Minus,
-  Quote,
-  TextQuote,
+    AlignCenter,
+    AlignLeft,
+    AlignRight,
+    ChevronRight,
+    Code2,
+    CodeSquare,
+    Heading1,
+    Heading2,
+    Heading3,
+    ImageIcon,
+    List,
+    ListOrdered,
+    Minus,
+    Quote,
+    TextQuote,
 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 

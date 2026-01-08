@@ -1,4 +1,4 @@
-"use client";
+'use client'
 /* eslint-disable */
 // @ts-nocheck
 import { PopoverClose } from "@radix-ui/react-popover";
@@ -11,16 +11,16 @@ import { Button, type ButtonProps } from "components/ui/button";
 import { Input } from "components/ui/input";
 import { Label } from "components/ui/label";
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipTrigger,
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
 } from "components/ui/tooltip";
 
 import { getUrlFromString } from "@/lib/tiptap-utils";
 import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
 } from "components/ui/popover";
 import { useToolbar } from "./toolbar-provider";
 

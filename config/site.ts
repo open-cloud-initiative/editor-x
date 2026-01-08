@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "Editor X",
-  url: "",
-  author: "Sebastian Döll (@katallaxie)",
-  links: {},
-};
+    name: 'Editor X',
+    url: '',
+    author: 'Sebastian Döll (@katallaxie)',
+    links: {},
+}
 
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig
 
 export const navConfig = {
-  mainNav: [{ title: "Home", path: "/" }],
-};
+    mainNav: [{ title: 'Home', path: '/' }],
+}

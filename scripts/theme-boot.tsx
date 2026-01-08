@@ -12,19 +12,11 @@ export function ThemeBootScript() {
     const persistence = JSON.stringify({
         theme_mode: PREFERENCE_PERSISTENCE.theme_mode,
         theme_preset: PREFERENCE_PERSISTENCE.theme_preset,
-        content_layout: PREFERENCE_PERSISTENCE.content_layout,
-        navbar_style: PREFERENCE_PERSISTENCE.navbar_style,
-        sidebar_variant: PREFERENCE_PERSISTENCE.sidebar_variant,
-        sidebar_collapsible: PREFERENCE_PERSISTENCE.sidebar_collapsible,
     })
 
     const defaults = JSON.stringify({
         theme_mode: PREFERENCE_DEFAULTS.theme_mode,
         theme_preset: PREFERENCE_DEFAULTS.theme_preset,
-        content_layout: PREFERENCE_DEFAULTS.content_layout,
-        navbar_style: PREFERENCE_DEFAULTS.navbar_style,
-        sidebar_variant: PREFERENCE_DEFAULTS.sidebar_variant,
-        sidebar_collapsible: PREFERENCE_DEFAULTS.sidebar_collapsible,
     })
 
     const code = `
