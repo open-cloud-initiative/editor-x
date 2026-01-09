@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site'
+import Link from 'next/link'
 
 export function SiteFooter() {
     return (
@@ -6,7 +7,12 @@ export function SiteFooter() {
             <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
                 <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
                     From{' '}
-                    <a className="font-medium underline underline-offset-4" rel="noreferrer" target="_blank">
+                    <a
+                        href={siteConfig.authorUrl}
+                        className="font-medium underline underline-offset-4"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
                         {siteConfig.author}
                     </a>{' '}
                     Inspired by{' '}
@@ -19,9 +25,14 @@ export function SiteFooter() {
                         ShadCN UI Website
                     </a>{' '}
                     . The source code is available on{' '}
-                    <a className="font-medium underline underline-offset-4" rel="noreferrer" target="_blank">
+                    <Link
+                        href={siteConfig.links.github}
+                        rel="noreferrer"
+                        target="_blank"
+                        className="font-medium underline underline-offset-4"
+                    >
                         GitHub
-                    </a>
+                    </Link>
                     .
                 </p>
             </div>
