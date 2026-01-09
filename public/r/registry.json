@@ -1,238 +1,93 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "editor-x",
-  "homepage": "",
+  "name": "Editor X",
+  "homepage": "https://open-cloud-initiative.github.io/editor-x",
   "items": [
     {
-      "name": "hello-world",
-      "type": "registry:block",
-      "title": "Hello World",
-      "description": "A simple hello world component.",
-      "files": [
-        {
-          "path": "registry/hello-world/hello-world.tsx",
-          "type": "registry:component",
-          "target": "components/hello-world"
-        }
-      ]
-    },
-    {
-      "name": "basic",
-      "type": "registry:block",
-      "title": "tiptap basic editor",
-      "description": "the tiptap rich text editor with shadcn-ui components",
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "editor-x",
+      "type": "registry:ui",
+      "title": "editor-x",
+      "author": "Sebastian Döll (@katallaxie)",
       "dependencies": [
+        "@floating-ui/dom",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-label",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-separator",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tabs",
+        "@radix-ui/react-toggle",
+        "@radix-ui/react-toggle-group",
+        "@radix-ui/react-tooltip",
         "@tiptap/core",
+        "@tiptap/extension-code-block-lowlight",
         "@tiptap/extension-color",
+        "@tiptap/extension-floating-menu",
         "@tiptap/extension-heading",
-        "@tiptap/extension-highlight",
         "@tiptap/extension-image",
         "@tiptap/extension-link",
+        "@tiptap/extension-list",
         "@tiptap/extension-placeholder",
         "@tiptap/extension-subscript",
         "@tiptap/extension-superscript",
+        "@tiptap/extension-table",
         "@tiptap/extension-text-align",
         "@tiptap/extension-text-style",
         "@tiptap/extension-typography",
         "@tiptap/extension-underline",
+        "@tiptap/markdown",
         "@tiptap/pm",
         "@tiptap/react",
         "@tiptap/starter-kit",
-        "class-variance-authority"
+        "@tiptap/suggestion",
+        "class-variance-authority",
+        "clsx",
+        "cmdk",
+        "fuse.js",
+        "lowlight",
+        "lucide-react",
+        "next",
+        "next-themes",
+        "postcss-nested",
+        "react-resizable-panels",
+        "shadcn",
+        "tailwind-merge",
+        "tailwindcss-animate",
+        "tippy.js",
+        "vaul",
+        "zustand"
       ],
-      "registryDependencies": [
-        "dropdown-menu",
-        "tooltip",
-        "scroll-area",
-        "popover",
-        "separator",
-        "dropdown-menu",
-        "label",
-        "input",
-        "drawer",
-        "checkbox",
-        "separator",
-        "command",
-        "tabs",
-        "dropdown-menu"
+      "devDependencies": [
+        "@eslint/eslintrc",
+        "@tailwindcss/postcss",
+        "@tiptap/extension-highlight",
+        "@total-typescript/ts-reset",
+        "@types/node",
+        "@typescript-eslint/parser",
+        "babel-plugin-react-compiler",
+        "eslint",
+        "eslint-config-google",
+        "eslint-config-next",
+        "eslint-config-prettier",
+        "eslint-import-resolver-typescript",
+        "eslint-plugin-import",
+        "eslint-plugin-prettier",
+        "postcss",
+        "prettier",
+        "prettier-eslint",
+        "prettier-plugin-tailwindcss",
+        "tailwindcss",
+        "tw-animate-css"
       ],
-      "files": [
-        {
-          "path": "registry/basic/page.tsx",
-          "type": "registry:page",
-          "target": "app/text-editor/page.tsx"
-        },
-        {
-          "path": "registry/basic/components/rich-text-editor.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/rich-text-editor.tsx"
-        },
-        {
-          "path": "registry/basic/components/tiptap.css",
-          "type": "registry:component",
-          "target": "components/tiptap/tiptap.css"
-        },
-        {
-          "path": "registry/basic/components/extensions/floating-menu.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/extensions/floating-menu.tsx"
-        },
-        {
-          "path": "registry/basic/components/extensions/floating-toolbar.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/extensions/floating-toolbar.tsx"
-        },
-        {
-          "path": "registry/basic/components/extensions/image.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/extensions/image.tsx"
-        },
-        {
-          "path": "registry/basic/components/extensions/image-placeholder.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/extensions/image-placeholder.tsx"
-        },
-        {
-          "path": "registry/basic/components/extensions/search-and-replace.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/extensions/search-and-replace.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/editor-toolbar.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/editor-toolbar.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/color-and-highlight.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/color-and-highlight.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/bold.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/bold.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/link.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/link.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/search-and-replace-toolbar.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/search-and-replace-toolbar.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/code-block.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/code-block.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/blockquote.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/blockquote.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/code.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/code.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/hard-break.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/hard-break.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/horizontal-rule.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/horizontal-rule.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/image-placeholder-toolbar.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/image-placeholder-toolbar.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/italic.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/italic.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/ordered-list.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/ordered-list.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/redo.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/redo.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/strikethrough.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/strikethrough.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/undo.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/undo.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/bullet-list.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/bullet-list.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/mobile-toolbar-group.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/mobile-toolbar-group.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/toolbar-provider.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/toolbar-provider.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/alignment.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/alignment.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/headings.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/headings.tsx"
-        },
-        {
-          "path": "registry/basic/components/toolbars/underline.tsx",
-          "type": "registry:component",
-          "target": "components/tiptap/toolbars/underline.tsx"
-        },
-        {
-          "path": "registry/basic/hooks/use-debounce.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-debounce.ts"
-        },
-        {
-          "path": "registry/basic/hooks/use-image-upload.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-image-upload.ts"
-        },
-        {
-          "path": "registry/basic/hooks/use-media-querry.ts",
-          "type": "registry:hook",
-          "target": "hooks/use-media-querry.ts"
-        },
-        {
-          "path": "registry/basic/lib/content.ts",
-          "type": "registry:lib",
-          "target": "lib/content.ts"
-        },
-        {
-          "path": "registry/basic/lib/tiptap-utils.ts",
-          "type": "registry:lib",
-          "target": "lib/tiptap-utils.ts"
-        }
-      ]
+      "registryDependencies": [],
+      "files": [],
+      "css": {
+
+      }
     }
   ]
 }
