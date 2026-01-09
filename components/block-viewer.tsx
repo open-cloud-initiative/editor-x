@@ -1,39 +1,38 @@
 'use client'
 import * as React from 'react'
 // import Image from "next/image";
-import {
-  Check,
-  ChevronRight,
-  Clipboard,
-  File,
-  Folder,
-  Fullscreen,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Terminal,
-} from 'lucide-react'
-import Link from 'next/link'
-import { ImperativePanelHandle } from 'react-resizable-panels'
-
 import { Button } from '@/components/ui/button'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
 import { Separator } from '@/components/ui/separator'
 import {
-  Sidebar,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarProvider,
+    Sidebar,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarMenuSub,
+    SidebarProvider,
 } from '@/components/ui/sidebar'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard'
+import {
+    Check,
+    ChevronRight,
+    Clipboard,
+    File,
+    Folder,
+    Fullscreen,
+    Monitor,
+    Smartphone,
+    Tablet,
+    Terminal,
+} from 'lucide-react'
+import Link from 'next/link'
+import { PanelImperativeHandle } from 'react-resizable-panels'
 import { OpenInV0Button } from './open-in-v0-button'
 
 interface FileContent {
@@ -64,7 +63,7 @@ type BlockViewerContext = {
     setStyle: (style: string) => void
     activeFile: string | null
     setActiveFile: (file: string) => void
-    resizablePanelRef: React.RefObject<ImperativePanelHandle | null>
+    resizablePanelRef: React.RefObject<PanelImperativeHandle | null>
     tree: TreeItem[]
     highlightedFiles: FileContent[] | null
 }
@@ -93,7 +92,7 @@ function BlockViewerProvider({
     const [view, setView] = React.useState<'code' | 'preview'>('preview')
     const [style, setStyle] = React.useState<string>('default')
     const [activeFile, setActiveFile] = React.useState<string | null>(highlightedFiles?.[0]?.path ?? null)
-    const resizablePanelRef = React.useRef<ImperativePanelHandle | null>(null)
+    const resizablePanelRef = React.useRef<PanelImperativeHandle | null>(null)
 
     return (
         <BlockViewerContext.Provider
@@ -207,12 +206,7 @@ function BlockViewerView() {
     return (
         <div className="group-data-[view=code]/block-view-wrapper:hidden md:h-[700px]">
             <ResizablePanelGroup direction="horizontal" className="relative z-10">
-                <ResizablePanel
-                    ref={resizablePanelRef}
-                    className="relative rounded-xl border bg-background"
-                    defaultSize={100}
-                    minSize={30}
-                >
+                <ResizablePanel className="relative rounded-xl border bg-background" defaultSize={100} minSize={30}>
                     <div className="h-full w-full">{item.component}</div>
                 </ResizablePanel>
                 <ResizableHandle className="relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-y-1/2 after:translate-x-[-1px] after:rounded-full after:bg-border after:transition-all after:hover:h-10 md:block" />
