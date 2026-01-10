@@ -40,8 +40,8 @@ import {
     EditorTableRowDelete,
     EditorTableRowMenu,
     EditorTableSplitCell,
-} from '@/components/tiptap/editor'
-import { EditorToolbar } from '@/components/tiptap/toolbars/editor-toolbar'
+} from '@/components/editorx/editor'
+import { EditorToolbar } from '@/components/editorx/toolbars/editor-toolbar'
 import Highlight from '@tiptap/extension-highlight'
 import { useState } from 'react'
 
