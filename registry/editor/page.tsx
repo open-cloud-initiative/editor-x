@@ -1,4 +1,4 @@
-import ExampleEditor from '@/components/tiptap/rich-text-editor'
+import ExampleEditor from './components/rich-text-editor'
 
 export default function Page() {
     return (

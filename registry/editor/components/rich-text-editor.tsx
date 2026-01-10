@@ -1,6 +1,6 @@
 'use client'
 
-import type { Editor, JSONContent } from '@/components/tiptap/editor'
+import type { Editor, JSONContent } from '@/components/editorx/editor'
 import {
     EditorBubbleMenu,
     EditorCharacterCount,
