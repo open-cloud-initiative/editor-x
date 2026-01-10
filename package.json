@@ -1,6 +1,12 @@
 {
     "name": "@open-cloud-initiative/editor-x",
-    "version": "0.1.0",
+    "version": "0.0.1",
+    "repository": "https://github.com/open-cloud-initiative/editor-x",
+    "license": "MIT",
+    "author": {
+        "name": "Sebastian Doell",
+        "email": "sebastian@katallaxie.dev"
+    },
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
